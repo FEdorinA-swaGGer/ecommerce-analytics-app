@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Футболка Classic",
+      "price": 1299,
+      "size": "M",
+      "color": "Белый",
+      "imageURL": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800",
+      "description": "100% хлопок."
+    },
+    {
+      "id": "2",
+      "name": "Джинсы Skinny",
+      "price": 2599,
+      "size": "L",
+      "color": "Синий",
+      "imageURL": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800",
+      "description": "Стильные облегающие джинсы."
+    },
+    {
+      "id": "3",
+      "name": "Куртка Bomber",
+      "price": 4999,
+      "size": "XL",
+      "color": "Черный",
+      "imageURL": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800",
+      "description": "Утепленная бомбер-куртка."
+    },
+    {
+      "id": "4",
+      "name": "Платье Summer",
+      "price": 3499,
+      "size": "S",
+      "color": "Красный",
+      "imageURL": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800",
+      "description": "Летнее платье из шифона."
+    },
+    {
+      "id": "5",
+      "name": "Толстовка Hoodie",
+      "price": 2399,
+      "size": "M",
+      "color": "Серый",
+      "imageURL": "https://images.unsplash.com/photo-1618354691321-e851c56960d1?w=800",
+      "description": "Уютная толстовка с капюшоном."
+    },
+    {
+      "id": "6",
+      "name": "Кроссовки Sport",
+      "price": 3799,
+      "size": "42",
+      "color": "Белый",
+      "imageURL": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+      "description": "Легкие кроссовки для бега."
+    },
+    {
+      "name": "Панама Сamouflage",
+      "price": 2399,
+      "size": "",
+      "color": "Хаки",
+      "imageURL": "https://www.lookbuck.com/system/products/items/images/075/096/746/small/9?1734494121",
+      "description": "",
+      "id": "adRhYPLYpL8"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

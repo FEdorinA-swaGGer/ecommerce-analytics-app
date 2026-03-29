@@ -1,0 +1,39 @@
+.page {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 72px);
+}
+
+.form {
+  width: min(420px, 92vw);
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.form input {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.form button {
+  border: none;
+  background: #111827;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.note {
+  margin: 0;
+  color: #4b5563;
+}
+
+.error {
+  margin: 0;
+  color: #ef4444;
+}
