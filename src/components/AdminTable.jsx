@@ -2,7 +2,7 @@ import styles from './AdminTable.module.css'
 
 function AdminTable({ products, onEdit, onDelete }) {
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} hover-lift`}>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -21,10 +21,18 @@ function AdminTable({ products, onEdit, onDelete }) {
               <td>{product.size}</td>
               <td>{product.color}</td>
               <td>
-                <button type="button" onClick={() => onEdit(product)}>
+                <button
+                  type="button"
+                  className="btn-animate btn-animate--muted"
+                  onClick={() => onEdit(product)}
+                >
                   Редактировать
                 </button>
-                <button type="button" onClick={() => onDelete(product.id)}>
+                <button
+                  type="button"
+                  className="btn-animate btn-animate--primary"
+                  onClick={() => onDelete(product.id)}
+                >
                   Удалить
                 </button>
               </td>

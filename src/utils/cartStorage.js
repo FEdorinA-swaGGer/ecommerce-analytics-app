@@ -13,6 +13,10 @@ export const getCartItems = () => {
 
 export const saveCartItems = (items) => {
   localStorage.setItem(CART_KEY, JSON.stringify(items))
+  // Same-tab updates don't fire the native storage event; Header listens for this custom event too.
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new Event('storage'))
+  }
 }
 
 export const addToCart = (product) => {
@@ -27,4 +31,9 @@ export const removeFromCartByIndex = (index) => {
   const nextItems = items.filter((_, itemIndex) => itemIndex !== index)
   saveCartItems(nextItems)
   return nextItems
+}
+
+export const clearCart = () => {
+  saveCartItems([])
+  return []
 }

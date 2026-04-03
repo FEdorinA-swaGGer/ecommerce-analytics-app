@@ -17,23 +17,26 @@ function Header() {
   return (
     <>
       <header className={styles.header}>
-        <Link to="/" className={styles.logo}>
+        <Link to="/" className={`${styles.logo} nav-brand-animate`}>
           Clothify Store
         </Link>
         <nav className={styles.nav}>
           <button
             type="button"
-            className={styles.cartButton}
+            className={`${styles.cartButton} btn-animate btn-animate--nav`}
             onClick={() => setIsCartOpen(true)}
           >
             Корзина ({cartCount})
           </button>
-          <Link to="/admin/login" className={styles.adminLink}>
+          <Link
+            to="/admin/login"
+            className={`${styles.adminLink} btn-animate btn-animate--nav`}
+          >
             Админ
           </Link>
         </nav>
       </header>
-      {isCartOpen && <Cart isOpen onClose={() => setIsCartOpen(false)} />}
+      <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </>
   )
 }

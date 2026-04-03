@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import AdminForm from '../components/AdminForm'
 import AdminTable from '../components/AdminTable'
 import {
@@ -39,19 +39,28 @@ function AdminPage() {
 
   return (
     <main className={styles.page}>
-      <div className={styles.headline}>
+      <div className={`${styles.headline} page-enter`}>
         <h1>Админ-панель</h1>
-        <button
-          type="button"
-          onClick={() => {
-            logoutAdmin()
-            navigate('/admin/login')
-          }}
-        >
-          Выйти
-        </button>
+        <div className={styles.headActions}>
+          <Link
+            to="/admin/analytics"
+            className={`${styles.secondaryLink} btn-animate btn-animate--outline`}
+          >
+            Аналитика
+          </Link>
+          <button
+            type="button"
+            className="btn-animate btn-animate--primary"
+            onClick={() => {
+              logoutAdmin()
+              navigate('/admin/login')
+            }}
+          >
+            Выйти
+          </button>
+        </div>
       </div>
-      <div className={styles.layout}>
+      <div className={`${styles.layout} page-enter-stagger`}>
         <AdminForm
           key={editProduct?.id ?? 'new-product'}
           onSubmit={handleSave}

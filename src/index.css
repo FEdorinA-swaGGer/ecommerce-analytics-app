@@ -13,3 +13,301 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* ——— Page entrance ——— */
+@keyframes ui-page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  opacity: 0;
+  animation: ui-page-enter 0.48s ease forwards;
+}
+
+.page-enter-delay-1 {
+  animation-delay: 0.06s;
+}
+
+.page-enter-delay-2 {
+  animation-delay: 0.12s;
+}
+
+.page-enter-delay-3 {
+  animation-delay: 0.18s;
+}
+
+.page-enter-stagger > * {
+  opacity: 0;
+  animation: ui-page-enter 0.48s ease forwards;
+}
+
+.page-enter-stagger > *:nth-child(1) {
+  animation-delay: 0.04s;
+}
+.page-enter-stagger > *:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.page-enter-stagger > *:nth-child(3) {
+  animation-delay: 0.12s;
+}
+.page-enter-stagger > *:nth-child(4) {
+  animation-delay: 0.16s;
+}
+.page-enter-stagger > *:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.page-enter-stagger > *:nth-child(6) {
+  animation-delay: 0.24s;
+}
+.page-enter-stagger > *:nth-child(7) {
+  animation-delay: 0.28s;
+}
+.page-enter-stagger > *:nth-child(8) {
+  animation-delay: 0.32s;
+}
+.page-enter-stagger > *:nth-child(9) {
+  animation-delay: 0.36s;
+}
+.page-enter-stagger > *:nth-child(10) {
+  animation-delay: 0.4s;
+}
+.page-enter-stagger > *:nth-child(11) {
+  animation-delay: 0.44s;
+}
+.page-enter-stagger > *:nth-child(12) {
+  animation-delay: 0.48s;
+}
+.page-enter-stagger > *:nth-child(n + 13) {
+  animation-delay: 0.52s;
+}
+
+/* ——— Card hover lift ——— */
+.hover-lift {
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 12px 28px rgba(17, 24, 39, 0.12);
+}
+
+/* ——— Buttons ——— */
+.btn-animate {
+  transform-origin: center;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    filter 0.22s ease;
+}
+
+.btn-animate:hover:not(:disabled) {
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px rgba(17, 24, 39, 0.1);
+}
+
+.btn-animate:active:not(:disabled) {
+  transform: scale(0.97);
+  transition-duration: 0.12s;
+}
+
+.btn-animate--primary:hover:not(:disabled) {
+  background-color: #dc2626;
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.28);
+}
+
+.btn-animate--primary:active:not(:disabled) {
+  background-color: #b91c1c;
+}
+
+.btn-animate--dark:hover:not(:disabled) {
+  background-color: #1f2937;
+  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.18);
+}
+
+.btn-animate--dark:active:not(:disabled) {
+  background-color: #030712;
+}
+
+.btn-animate--muted {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.btn-animate--muted:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  box-shadow: 0 4px 14px rgba(17, 24, 39, 0.08);
+}
+
+.btn-animate--muted:active:not(:disabled) {
+  background-color: #d1d5db;
+}
+
+.btn-animate--outline {
+  background-color: #fff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.btn-animate--outline:hover:not(:disabled) {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.btn-animate--outline:active:not(:disabled) {
+  background-color: #f3f4f6;
+}
+
+.btn-animate--nav {
+  border: 1px solid #374151;
+  background-color: #1f2937;
+  color: #fff;
+}
+
+.btn-animate--nav:hover:not(:disabled) {
+  background-color: #374151;
+  border-color: #4b5563;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-animate--nav:active:not(:disabled) {
+  background-color: #111827;
+}
+
+/* ——— Header logo ——— */
+.nav-brand-animate {
+  display: inline-block;
+  transform-origin: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-brand-animate:hover {
+  transform: scale(1.03);
+  opacity: 0.92;
+}
+
+.nav-brand-animate:active {
+  transform: scale(0.98);
+  transition-duration: 0.12s;
+}
+
+/* ——— Modals: product modal ——— */
+@keyframes ui-modal-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ui-modal-overlay-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes ui-modal-panel-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes ui-modal-panel-out {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+}
+
+/* Backdrop classes live on the same node as ui-modal-root — use compound selectors, not descendant */
+.ui-modal-root.ui-modal--in.ui-modal-backdrop {
+  animation: ui-modal-overlay-in 0.28s ease forwards;
+}
+
+.ui-modal-root.ui-modal--out.ui-modal-backdrop {
+  animation: ui-modal-overlay-out 0.24s ease forwards;
+}
+
+.ui-modal-root.ui-modal--in .ui-modal-panel {
+  animation: ui-modal-panel-in 0.32s ease cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.ui-modal-root.ui-modal--out .ui-modal-panel {
+  animation: ui-modal-panel-out 0.24s ease forwards;
+}
+
+/* ——— Cart drawer ——— */
+@keyframes ui-cart-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ui-cart-overlay-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes ui-cart-drawer-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes ui-cart-drawer-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.ui-cart-root.ui-cart--in.ui-cart-backdrop {
+  animation: ui-cart-overlay-in 0.28s ease forwards;
+}
+
+.ui-cart-root.ui-cart--out.ui-cart-backdrop {
+  animation: ui-cart-overlay-out 0.24s ease forwards;
+}
+
+.ui-cart-root.ui-cart--in .ui-cart-drawer {
+  animation: ui-cart-drawer-in 0.34s ease cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.ui-cart-root.ui-cart--out .ui-cart-drawer {
+  animation: ui-cart-drawer-out 0.26s ease forwards;
+}

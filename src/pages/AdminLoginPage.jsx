@@ -20,7 +20,7 @@ function AdminLoginPage() {
 
   return (
     <main className={styles.page}>
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form className={`${styles.form} page-enter hover-lift`} onSubmit={handleSubmit}>
         <h1>Вход в админку</h1>
         <p className={styles.note}>
           Демо-авторизация: admin / password (не для продакшена).
@@ -43,7 +43,9 @@ function AdminLoginPage() {
             setForm((prev) => ({ ...prev, password: event.target.value }))
           }
         />
-        <button type="submit">Войти</button>
+        <button type="submit" className="btn-animate btn-animate--dark">
+          Войти
+        </button>
       </form>
     </main>
   )

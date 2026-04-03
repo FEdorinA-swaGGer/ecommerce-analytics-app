@@ -37,7 +37,7 @@ function AdminForm({ onSubmit, editProduct, onCancelEdit }) {
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={`${styles.form} hover-lift`} onSubmit={handleSubmit}>
       <h3>{editProduct ? 'Редактирование' : 'Новый товар'}</h3>
       {error && <p className={styles.error}>{error}</p>}
       <input name="name" placeholder="name" value={values.name} onChange={handleChange} />
@@ -62,9 +62,15 @@ function AdminForm({ onSubmit, editProduct, onCancelEdit }) {
         value={values.description}
         onChange={handleChange}
       />
-      <button type="submit">Сохранить</button>
+      <button type="submit" className="btn-animate btn-animate--dark">
+        Сохранить
+      </button>
       {editProduct && (
-        <button type="button" onClick={onCancelEdit}>
+        <button
+          type="button"
+          className="btn-animate btn-animate--muted"
+          onClick={onCancelEdit}
+        >
           Отмена
         </button>
       )}

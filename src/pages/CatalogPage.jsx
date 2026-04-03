@@ -15,13 +15,12 @@ function CatalogPage() {
 
   const handleAddToCart = (product) => {
     addToCart(product)
-    window.dispatchEvent(new Event('storage'))
   }
 
   return (
     <main className={styles.page}>
-      <h1>Каталог одежды</h1>
-      <div className={styles.grid}>
+      <h1 className="page-enter">Каталог одежды</h1>
+      <div className={`${styles.grid} page-enter-stagger`}>
         {products.map((product) => (
           <ProductCard
             key={product.id}
@@ -32,7 +31,11 @@ function CatalogPage() {
         ))}
       </div>
       {selectedId && (
-        <ProductModal productId={selectedId} onClose={() => setSelectedId(null)} />
+        <ProductModal
+          key={selectedId}
+          productId={selectedId}
+          onClose={() => setSelectedId(null)}
+        />
       )}
     </main>
   )

@@ -1,0 +1,299 @@
+.section {
+  margin-top: 18px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 18px 16px;
+  border: 1px solid #efe7dc;
+  box-shadow:
+    0 1px 2px rgba(28, 25, 23, 0.04),
+    0 6px 20px rgba(28, 25, 23, 0.05);
+}
+
+.header {
+  margin-bottom: 14px;
+}
+
+.title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1c1917;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #78716c;
+  line-height: 1.45;
+  max-width: 42rem;
+}
+
+.scroll {
+  overflow-x: auto;
+  width: 100%;
+  margin: 0 -2px;
+  padding: 0 2px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: #292524;
+  table-layout: fixed;
+}
+
+.colDate {
+  width: 148px;
+}
+
+.colSource {
+  width: 168px;
+}
+
+.colStatus {
+  width: 136px;
+}
+
+.colSum {
+  width: 116px;
+}
+
+.colComposition {
+  width: auto;
+  min-width: 0;
+}
+
+.th {
+  text-align: left;
+  padding: 11px 10px 9px 0;
+  font-size: 10px;
+  font-weight: 700;
+  color: #78716c;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #ece8e4;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.thRight {
+  text-align: right;
+  padding-right: 0;
+}
+
+.thSum {
+  padding-right: 14px;
+  padding-left: 8px;
+  border-right: 1px solid #efe7dc;
+}
+
+.thComposition {
+  padding-left: 16px;
+}
+
+.cell {
+  padding: 11px 10px 11px 0;
+  border-bottom: 1px solid #f0ebe6;
+  vertical-align: middle;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.cellRight {
+  text-align: right;
+  padding-right: 0;
+  padding-left: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.cellSum {
+  white-space: nowrap;
+  padding-right: 14px;
+  padding-left: 8px;
+  border-right: 1px solid #efe7dc;
+  vertical-align: middle;
+}
+
+.cellComposition {
+  padding-left: 16px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.compositionInner {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 100%;
+  line-height: 1.45;
+}
+
+.compositionRich {
+  color: #44403c;
+  font-size: 13px;
+}
+
+.compositionCountOnly {
+  color: #57534e;
+  font-size: 13px;
+}
+
+.compositionLegacy,
+.compositionUnreadable {
+  color: #a8a29e;
+  font-size: 13px;
+  font-style: normal;
+}
+
+.row:hover .cell {
+  background: #faf8f5;
+}
+
+.row:last-child .cell {
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-block;
+  max-width: 100%;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  line-height: 1.25;
+}
+
+.badgeDefault {
+  color: #57534e;
+  background: #f5f0ea;
+  border-color: #e7e0d8;
+}
+
+.badgeCompleted {
+  color: #166534;
+  background: #ecfdf3;
+  border-color: #bbf7d0;
+}
+
+.badgeProcessing {
+  color: #92400e;
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.badgeCancelled {
+  color: #991b1b;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.badgeShipped {
+  color: #3f6212;
+  background: #f4f9f0;
+  border-color: #d9e8d0;
+}
+
+.badgeRefunded {
+  color: #7c2d12;
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.empty {
+  margin: 0;
+  padding: 26px 16px;
+  text-align: center;
+  color: #78716c;
+  font-size: 14px;
+  line-height: 1.45;
+  border-radius: 10px;
+  background: #faf8f5;
+  border: 1px dashed #e7e0d8;
+}
+
+.skeleton {
+  height: 196px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #f5f0ea 0%, #ebe3d8 50%, #f5f0ea 100%);
+  background-size: 200% 100%;
+  animation: recentOrdersSkeleton 1.2s ease-in-out infinite;
+}
+
+@keyframes recentOrdersSkeleton {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.emDash {
+  color: #a8a29e;
+}
+
+@media (max-width: 900px) {
+  .colDate {
+    width: 128px;
+  }
+
+  .colSource {
+    width: 148px;
+  }
+
+  .colStatus {
+    width: 120px;
+  }
+
+  .colSum {
+    width: 108px;
+  }
+}
+
+@media (max-width: 720px) {
+  .card {
+    padding: 14px 14px 14px;
+  }
+
+  .table {
+    table-layout: auto;
+    min-width: min(640px, 100%);
+  }
+
+  .colDate,
+  .colSource,
+  .colStatus,
+  .colSum {
+    width: auto;
+    min-width: 5rem;
+  }
+
+  .colComposition {
+    min-width: 160px;
+  }
+
+  .thSum,
+  .cellSum {
+    border-right: none;
+    padding-right: 10px;
+  }
+
+  .thComposition,
+  .cellComposition {
+    padding-left: 10px;
+  }
+}
