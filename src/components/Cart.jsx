@@ -78,6 +78,7 @@ function Cart({ isOpen, onClose }) {
         items,
         source: checkoutSource,
       })
+      console.log('ORDER PAYLOAD:', payload)
       await createOrder(payload)
       setItems(clearCart())
       requestCloseRef.current()
